@@ -128,10 +128,11 @@ function Swap() {
     const modifyToken = (i) => {
         setTokenOneAmount(0)
         setTokenTwoAmount(0)
+
         if (changeToken === 1) {
-          setTokenOne(tokenList[i])
+          if(tokenTwo.address !== tokenList[i].address) setTokenOne(tokenList[i])
         } else {
-          setTokenTwo(tokenList[i])
+          if(tokenOne.address !== tokenList[i].address) setTokenTwo(tokenList[i])
         }
         setIsOpen(false)
         getAllBalances()
