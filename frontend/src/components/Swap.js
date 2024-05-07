@@ -7,7 +7,7 @@ import { utils, Contract, providers } from 'ethers'
 
 import { routerABI } from '../routerABI.js'
 import { tokenABI } from '../tokenABI.js'
-const routerAddress = "0xc4d469753D193D11b09da965C2EB8a58bA2DEa29"
+const routerAddress = "0xe646114957c60C76634Cd8D87005a76D13e9c984"
 
 function Swap() {
 
