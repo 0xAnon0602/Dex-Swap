@@ -1,0 +1,17 @@
+[
+    {
+        "ticker": "USDC",
+        "img": "https://cdn.moralis.io/eth/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
+        "name": "USD Coin",
+        "address": "0x011a0cf2C13bFe6Ec8c1c16c3f3b12a9108f1326",
+        "decimals": 18
+    },
+    {
+        "ticker": "USDT",
+        "img": "https://cdn.moralis.io/eth/0xdac17f958d2ee523a2206206994597c13d831ec7.png",
+        "name": "Tether USD",
+        "address": "0x89a9Fe6c442F1875FAAaD742452c1431100d7BDE",
+        "decimals": 18
+    }
+    
+]
