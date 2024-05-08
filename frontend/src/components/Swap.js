@@ -29,9 +29,16 @@ function Swap() {
 
       if(_newAmount !== 0){
 
-        const ethersProvider = new providers.Web3Provider(walletProvider)
-        const signer = ethersProvider.getSigner()
-        const routerContract = new Contract(routerAddress, routerABI, signer)
+        let routerContract
+
+        if(!isConnected){
+          const provider = new providers.JsonRpcProvider("https://rpc.testnet.fantom.network");
+          routerContract = new Contract(routerAddress, routerABI, provider)
+        }else{
+          const ethersProvider = new providers.Web3Provider(walletProvider)
+          const signer = ethersProvider.getSigner()
+          routerContract = new Contract(routerAddress, routerABI, signer)
+        }
 
         const result = await routerContract.getAmountsOut(
           utils.parseEther(_newAmount),
